@@ -1,0 +1,15 @@
+name: PlayerStatisticsTracker
+description: Tracking player statistic sakaw
+version: '${version}'
+
+main: heinzPlugin.playerStatisticsTracker.PlayerStatisticsTracker
+paper-plugin-loader: heinzPlugin.playerStatisticsTracker.PlayerStatisticsTrackerLoader
+api-version: '26.3'
+load: POSTWORLD
+
+commands:
+  stats:
+    description: View your player statistics
+    usage: /stats
+
+authors: [ HeinzWasEaten ]
