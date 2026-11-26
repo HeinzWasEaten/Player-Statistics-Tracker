@@ -1,6 +1,8 @@
 plugins {
     id("java-library")
     id("xyz.jpenilla.run-paper") version "3.1.0"
+    id("com.gradleup.shadow") version "9.3.2"
+
 }
 
 repositories {
@@ -10,6 +12,7 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:26.3.build.+")
+    implementation("com.google.code.gson:gson:2.13.2")
 }
 
 java {
@@ -30,5 +33,8 @@ tasks {
         filesMatching("plugin.yml") {
             expand(props)
         }
+    }
+    shadowJar {
+        archiveClassifier.set("")
     }
 }

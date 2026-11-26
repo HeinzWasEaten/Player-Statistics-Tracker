@@ -1,4 +1,4 @@
-name: PlayerStatisticsTracker
+name: Player-Statistics-Tracker
 description: Tracking player statistic sakaw
 version: '${version}'
 

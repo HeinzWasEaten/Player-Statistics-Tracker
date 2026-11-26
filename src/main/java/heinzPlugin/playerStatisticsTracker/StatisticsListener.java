@@ -33,6 +33,9 @@ public class StatisticsListener implements Listener {
         Player player = event.getPlayer();
         Block block = event.getBlock();
         String playerName = player.getName();
+
+        manager.addBlockPlaced(playerName);
+
         Bukkit.getLogger().info(playerName + " placed " +  event.getBlock().getType());
     }
 }

@@ -24,10 +24,13 @@ public class StatsCommand implements CommandExecutor {
         Player player = (Player) sender;
         String playerName = player.getName();
 
-        int blocksBroken = manager.getBlockCount(playerName);
+        int blocksBroken = manager.getBlockBrokenCount(playerName);
+        int blocksPlaced = manager.getBlockPlacedCount(playerName);
 
-        player.sendMessage("===== Your Statistics =====");
-        player.sendMessage("===== Blocks Broken: " + blocksBroken);
+        player.sendMessage(ChatColor.GOLD + "===== Your Statistics =====");
+        player.sendMessage(ChatColor.YELLOW + "Blocks Broken: " + blocksBroken);
+        player.sendMessage(ChatColor.YELLOW + "Blocks Placed: " + blocksPlaced);
+        player.sendMessage(ChatColor.GOLD + "===========================");
 
         return true;
 
